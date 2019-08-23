@@ -6,4 +6,12 @@ class Portfolio < ApplicationRecord
     end
 
     scope :react_portfolio_item, -> {where(subtitle: "React")}
-end
+
+    after_initialize :set_defaults
+
+    def set_defaults
+        self.main_image ||= "https://via.placeholder.com/300x300"
+        self.thumb_image ||= "https://via.placeholder.com/150x150"
+    end
+
+ end
