@@ -27,6 +27,6 @@
     <h1>Thanks for visiting me from <%= session[:source]%></h1>
 <%end%>
     <%= yield %>
-    <%= render "shared/navbar"%>
+    <%= render "shared/navbar", location:"bottom"%>
   </body>
 </html>
