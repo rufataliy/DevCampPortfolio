@@ -15,6 +15,7 @@
     <% @blogs.each do |blog| %>
       <tr>
         <td><%= blog.title %></td>
+        <td><%= blog.topic.title %></td>
         <td><%= blog.body %></td>
         <td><%= link_to blog.status2, toggle_status_blog_path(blog) %></td>
         <td><%= link_to 'Show', blog %></td>
