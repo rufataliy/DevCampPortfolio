@@ -10,4 +10,5 @@ class Blog < ApplicationRecord
     def set_defaults
         self.topic_id ||= 1
     end
+  
 end
