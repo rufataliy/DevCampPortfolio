@@ -11,7 +11,7 @@
   </head>
 
   <body>
-
+      <%= source_helper%>
    
         <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
@@ -19,9 +19,7 @@
      <%= login_helper%>
        
 
-  <% if session[:source] %>
-    <h1>Thanks for visiting me from <%= session[:source]%></h1>
-<%end%>
+  
     <%= yield %>
     <%= render "shared/navbar", location:"bottom"%>
   </body>
