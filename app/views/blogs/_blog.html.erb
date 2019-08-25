@@ -1,4 +1,5 @@
     <tr>
+        <td><%= distance_of_time_in_words(blog.created_at, Time.now) %> ago</td>
         <td><%= blog.title %></td>
         <td><%= blog.topic.title %></td>
         <td><%= blog.body %></td>
