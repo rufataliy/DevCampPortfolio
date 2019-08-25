@@ -13,14 +13,9 @@
   <body>
 
     <%= render "shared/navbar", location: "top"%>
-        <p class="notice"><%= notice %></p>
+       <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
-       <% if current_user.is_a?(User) %>
-          <%= link_to  "log out", destroy_user_session_path, method: :delete %>
-        <% else%>
-          <%= link_to  "log in", new_user_session_path %>
-          <%= link_to  "register", new_user_registration_path %>
-        <% end%>
+      <%= login_helper %>
        
 
   <% if session[:source] %>
