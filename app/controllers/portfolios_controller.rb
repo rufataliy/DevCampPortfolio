@@ -1,5 +1,6 @@
 class PortfoliosController < ApplicationController
     before_action :set_portfolio_item, only: [:edit,:update,:destroy, :show]
+    access all: [:show, :index,:angular], user: {except: [:destroy, :new, :edit, :create, ]}, site_admin: :all
     layout "portfolio"
     def index
         @portfolio_items = Portfolio.all
@@ -8,8 +9,6 @@ class PortfoliosController < ApplicationController
     def angular
       @angular_portfolio_items = Portfolio.angular
     end
-
-
 
     def new
         @portfolio_item = Portfolio.new
