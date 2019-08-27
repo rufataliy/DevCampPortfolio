@@ -4,5 +4,9 @@ class ApplicationController < ActionController::Base
    include CurrentUserConcern
    include DefaultPageTitle
    
-   
+   before_action :set_copyright
+
+   def set_copyright
+      @copyright = DevCampViewTool::Renderer.copyright "Rufat Aliyev", "All rights reserved"
+   end
 end

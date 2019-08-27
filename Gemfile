@@ -50,3 +50,9 @@ gem 'friendly_id', '~> 5.2.4'
 gem 'devise', '~> 4.7'
 
 gem "pry-byebug"
+
+gem 'bootstrap', '~> 4.3.1'
+
+gem 'petergate', '~> 2.0', '>= 2.0.1'
+
+# gem "devcamp_view_tool", git:"https://github.com/rufataliy/CopyrightViewTool"
