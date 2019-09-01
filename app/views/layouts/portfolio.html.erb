@@ -11,14 +11,8 @@
   </head>
 
   <body>
-
-    <%= render "shared/navbar", location: "top"%>
-       <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-      <%= login_helper %>
-       
-
-<%= source_helper%>
+        <%= render "shared/navbar", location: "top"%>
+        <%= source_helper%>
     <%= yield %>
   </body>
 </html>
