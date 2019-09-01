@@ -1,8 +1,26 @@
 
-    <div class="<%= location %>">
-      <%= link_to  "Home", root_path %>
-      <%= link_to  "About", about_path %>
-      <%= link_to  "Contact", contact_path %>
-      <%= link_to  "Blog", blogs_path %>
-      <%= link_to  "Portfolio", portfolios_path %>
-    </div>
+     <a class="menu-toggle rounded" href="#">
+    <i class="fas fa-bars"></i>
+  </a>
+  <nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a class="js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <%= link_to  "Home",  root_path, class:"js-scroll-trigger"%>
+      </li>
+      <li class="sidebar-nav-item">
+        <%= link_to  "About",  about_path, class:"js-scroll-trigger" %>
+      </li>
+      <li class="sidebar-nav-item">
+        <%= link_to  "Contact",  contact_path, class:"js-scroll-trigger"%>
+      </li>
+      <li class="sidebar-nav-item">
+        <%= link_to  "Blog", blogs_path ,class:"js-scroll-trigger"%>
+      </li>
+      <li class="sidebar-nav-item">
+        <%= link_to  "Portfolio", portfolios_path ,class:"js-scroll-trigger"%>
+      </li>
+    </ul>
+  </nav>
