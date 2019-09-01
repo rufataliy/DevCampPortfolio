@@ -8,12 +8,13 @@
 
     <%= stylesheet_link_tag 'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/9b11983a29.js"></script>
+
   </head>
 
   <body>
       <%= render "shared/navbar", location: "top"%>
       <%= source_helper%>
-   
     <%= yield %>
   </body>
 </html>

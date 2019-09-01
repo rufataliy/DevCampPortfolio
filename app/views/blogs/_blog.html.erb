@@ -1,10 +1,13 @@
-    <tr>
-        <td><%= distance_of_time_in_words(blog.created_at, Time.now) %> ago</td>
-        <td><%= blog.title %></td>
-        <td><%= blog.topic.title %></td>
-        <td><%= blog.body %></td>
-        <td><%= link_to blog.status2, toggle_status_blog_path(blog) %></td>
-        <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) if logged_in?(:site_admin)%></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %></td>
-      </tr>
+
+
+        <div class="card mb-4">
+          <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+          <div class="card-body">
+            <h2 class="card-title"><%= blog.title %></h2>
+            <p class="card-text"><%= blog.topic.title %>!</p>
+            <%= link_to 'Read more &rarr;', blog , class: "btn btn-primary"%>
+          </div>
+          <div class="card-footer text-muted">
+            Posted <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago
+          </div>
+        </div>
