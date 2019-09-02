@@ -6,6 +6,7 @@
 require("@rails/ujs").start()
 require('jquery')
 require("./stylish-portfolio.js")
+require("./googleMap.js")
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
