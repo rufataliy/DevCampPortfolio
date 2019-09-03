@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy,:toggle_status]
-  access all: [:show, :index], user: {except: [:destroy, :new, :edit, :create, ]}, site_admin: :all
+  access all: [:show, :index], user: {except: [:destroy, :new, :edit, :create, :toggle_status ]}, site_admin: :all
   layout "blog"
   # GET /blogs
   # GET /blogs.json
@@ -13,6 +13,7 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    
     @page_title = @blog.title
   end
 
@@ -65,8 +66,10 @@ class BlogsController < ApplicationController
     end
   end
   def toggle_status
+    
     if @blog.published2?
       @blog.draft2!
+    
     elsif @blog.draft2?
       @blog.published2!
     end

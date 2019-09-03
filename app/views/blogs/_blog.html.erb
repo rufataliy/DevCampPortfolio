@@ -6,8 +6,10 @@
             <h2 class="card-title"><%= blog.title %></h2>
             <p class="card-text"><%= blog.topic.title %>!</p>
             <%= link_to 'Read more &rarr;', blog , class: "btn btn-primary"%>
+            <%= link_to "s",  toggle_status_blog_path(blog), class: "btn btn-block btn-outline-primary"%>
           </div>
           <div class="card-footer text-muted">
+          <%= blog.status2%>
             Posted <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago
           </div>
         </div>
