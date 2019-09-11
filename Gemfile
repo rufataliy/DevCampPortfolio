@@ -58,3 +58,4 @@ gem 'petergate', '~> 2.0', '>= 2.0.1'
 # gem "devcamp_view_tool", git:"https://github.com/rufataliy/CopyrightViewTool"
 gem 'jquery-rails'
 gem 'font-awesome-sass'
+gem 'kaminari', :git => "git://github.com/amatsuda/kaminari.git", :branch => 'master'
