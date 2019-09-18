@@ -1,4 +1,8 @@
 @import "bootstrap";
 @import "./scss/stylish-portfolio.min.css";
 @import "./scss/bootstrap-overrides";
-@import "./scss/portfolio"
+@import "./scss/portfolio";
+
+ul {
+    list-style: none;
+}
