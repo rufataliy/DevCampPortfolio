@@ -10,6 +10,9 @@ class Portfolio < ApplicationRecord
         where(subtitle: "Angular")
     end
 
+    def self.by_position
+        order("position ASC")
+    end
     scope :react_portfolio_item, -> {where(subtitle: "React")}
     #setting default values for creating new portfolio items
     after_initialize :set_defaults
