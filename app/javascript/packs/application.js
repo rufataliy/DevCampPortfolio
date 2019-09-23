@@ -6,12 +6,14 @@
 require("@rails/ujs").start()
 require('jquery')
 require("./stylish-portfolio.js")
+require("./html.sortable")
 require("./googleMap.js")
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
-
+//= require html.sortable
+//= require jquery-ui
 //= require bootstrap
 //= require_tree .
 
